@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riptide Zero-Trust RAG</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1><i class="fa-solid fa-shield-halved"></i> Riptide <span class="badge">Zero-Trust</span></h1>
+            <p>Voice-Controlled Secure RAG Assistant</p>
+        </header>
+
+        <main>
+            <div class="chat-container" id="chatContainer">
+                <div class="message system-message">
+                    <div class="avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="content">
+                        <p>Welcome to Riptide. I'm connected to the secure email archive. What would you like to know?</p>
+                        <span class="timestamp">System initialized</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chunk Inspector UI (Stretch Goal) -->
+            <div class="chunk-inspector hidden" id="chunkInspector">
+                <h3><i class="fa-solid fa-magnifying-glass"></i> Chunk Inspector</h3>
+                <div class="inspector-content" id="inspectorContent"></div>
+            </div>
+            
+            <div class="input-area">
+                <button id="micBtn" class="mic-btn pulse" title="Start speaking">
+                    <i class="fa-solid fa-microphone"></i>
+                </button>
+                <div class="input-wrapper">
+                    <input type="text" id="textInput" placeholder="Speak or type your query (Fallback)...">
+                    <div id="recordingIndicator" class="recording-indicator hidden">
+                        <div class="dot"></div> Listening...
+                    </div>
+                </div>
+                <button id="sendBtn" class="send-btn" title="Send query">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
